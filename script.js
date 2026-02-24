@@ -62,7 +62,7 @@ function displayJobs() {
 
            
             let card = `
-                <div class="border p-4 rounded bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div class="border p-4 rounded bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-start gap-4">
                     <div class="flex-1">
                         <p class="text-[#0B005C] font-bold text-2xl">${job.company}</p>
                         <h3 class="text-gray-500">${job.title}</h3>
@@ -88,8 +88,8 @@ function displayJobs() {
 
                     <!-- Delete Button -->
                     <div>
-                        <button onclick="deleteJob(${job.id})" class="bg-gray-200 px-3 py-1 rounded text-gray-500 hover:bg-red-200 hover:text-red-600">
-                           <i class="fa-classic fa-solid fa-trash-can"></i> Delete
+                        <button onclick="deleteJob(${job.id})" class="bg-gray-100 px-3 py-2 rounded-md text-gray-500 hover:bg-red-100 hover:text-red-600 transition-colors">
+                        <i class="fa-solid fa-trash-can mr-1"></i> Delete
                         </button>
                     </div>
                 </div>
