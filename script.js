@@ -62,7 +62,7 @@ function displayJobs() {
 
            
             let card = `
-                <div class="border p-4 rounded bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-start gap-4">
+                <div class="border p-4 rounded-md bg-gray-50 flex flex-col md:flex-row justify-between items-start md:items-start gap-4">
                     <div class="flex-1">
                         <p class="text-[#0B005C] font-bold text-2xl">${job.company}</p>
                         <h3 class="text-gray-500">${job.title}</h3>
@@ -73,7 +73,7 @@ function displayJobs() {
                         <!-- Primary Button -->
                         <div class="flex gap-2">
                         <!-- Interview Button -->
-                        <button onclick="makeInterview(${job.id})" class="px-3 py-1 rounded text-sm  ${interviewColor}">
+                        <button onclick="makeInterview(${job.id})" class="px-3 py-1 rounded-md text-sm  ${interviewColor}">
                             Interview
                         </button>
                         
