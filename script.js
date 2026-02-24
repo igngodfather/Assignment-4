@@ -67,7 +67,7 @@ function displayJobs() {
                         <p class="text-[#0B005C] font-bold text-2xl">${job.company}</p>
                         <h3 class="text-gray-500">${job.title}</h3>
                         <p class="text-sm text-gray-500 mt-4 mb-4">${job.location} • ${job.type} • Salary: ${job.salary}</p>
-                        <p class="inline-block text-sm text-gray-500 mt-1 border border-gray-300 rounded-md px-2 py-1">${job.status}</p>
+                        <p class="inline-block text-sm text-gray-800 mt-1 border border-gray-300 rounded-md px-2 py-1">${job.status}</p>
                         <p class="text-sm text-gray-500 my-4">${job.description}</p>
                         
                         <!-- Primary Button -->
