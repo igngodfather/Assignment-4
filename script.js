@@ -22,6 +22,7 @@ window.onload = function () {
 function displayJobs() {
     const jobContainer = document.getElementById('job-list');
     const noDataMsg = document.getElementById('no-data-msg');
+    const jobCountDisplay = document.getElementById('job-count-display');
 
 
     jobContainer.innerHTML = '';
@@ -42,7 +43,9 @@ function displayJobs() {
             return job.status === 'rejected';
         });
     }
-
+    if (jobCountDisplay) {
+        jobCountDisplay.innerText = filteredJobs.length;
+    }
     
     if (filteredJobs.length === 0) {
         noDataMsg.classList.remove('hidden'); 
@@ -86,7 +89,7 @@ function displayJobs() {
                     <!-- Delete Button -->
                     <div>
                         <button onclick="deleteJob(${job.id})" class="bg-gray-200 px-3 py-1 rounded text-gray-500 hover:bg-red-200 hover:text-red-600">
-                            Delete
+                           <i class="fa-classic fa-solid fa-trash-can"></i> Delete
                         </button>
                     </div>
                 </div>
