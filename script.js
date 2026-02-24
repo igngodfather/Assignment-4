@@ -97,9 +97,9 @@ function displayJobs() {
     }
 }
 
-// ২. স্ট্যাটাস পরিবর্তন করার ফাংশন
+
 function makeInterview(id) {
-    // লুপ চালিয়ে নির্দিষ্ট জব খুঁজে বের করা
+    
     for (let i = 0; i < jobs.length; i++) {
         if (jobs[i].id === id) {
             jobs[i].status = 'interview';
@@ -121,11 +121,11 @@ function makeRejected(id) {
     displayJobs();
 }
 
-// ৩. ডিলিট করার ফাংশন
+
 function deleteJob(id) {
     let confirmDelete = confirm("Are you sure you want to delete?");
     if (confirmDelete) {
-        // filter করে ওই আইডি ছাড়া বাকিগুলো রেখে দিচ্ছি
+        
         jobs = jobs.filter(function (job) {
             return job.id !== id;
         });
@@ -134,26 +134,26 @@ function deleteJob(id) {
     }
 }
 
-// ৪. ট্যাব পরিবর্তন করার ফাংশন (All, Interview, Rejected)
+
 function showTab(tabName) {
     currentTab = tabName;
 
-    // বাটনগুলোর স্টাইল রিসেট করা
+    
     document.getElementById('btn-all').className = "px-4 py-2 rounded border bg-gray-100";
     document.getElementById('btn-interview').className = "px-4 py-2 rounded border bg-gray-100";
     document.getElementById('btn-rejected').className = "px-4 py-2 rounded border bg-gray-100";
 
-    // যেটাতে ক্লিক করা হয়েছে সেটাকে নীল (active) করা
+    
     document.getElementById('btn-' + tabName).className = "px-4 py-2 rounded border active-btn";
 
     displayJobs();
 }
 
-// ৫. ড্যাশবোর্ড আপডেট করার ফাংশন (Count Update)
+
 function updateDashboard() {
     let total = jobs.length;
 
-    // কতগুলো ইন্টারভিউ আছে গোনা
+
     let interviewCount = 0;
     for (let i = 0; i < jobs.length; i++) {
         if (jobs[i].status === 'interview') {
@@ -161,7 +161,7 @@ function updateDashboard() {
         }
     }
 
-    // কতগুলো রিজেক্টেড আছে গোনা
+   
     let rejectedCount = 0;
     for (let i = 0; i < jobs.length; i++) {
         if (jobs[i].status === 'rejected') {
@@ -169,7 +169,7 @@ function updateDashboard() {
         }
     }
 
-    // HTML এ সংখ্যা বসানো
+   
     document.getElementById('total-count').innerText = total;
     document.getElementById('interview-count').innerText = interviewCount;
     document.getElementById('rejected-count').innerText = rejectedCount;
